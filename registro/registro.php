@@ -23,10 +23,9 @@
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vh;">
                         <li class="nav-item">
                             <a class="nav-link" href="../view/nosotros.html">Sobre Nosotros</a>
-
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../view/actividades.html">Actividades</a>
+                            <a class="nav-link" href="../view/actividades.php">Actividades</a>
                         </li>
                     </ul>
                 </div>

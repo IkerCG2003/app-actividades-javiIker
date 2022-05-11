@@ -30,7 +30,10 @@
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./actividades.html">Actividades</a>
+                        <a class="nav-link" href="./actividades.php">Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../misactividades/misactividades.php">Mis Actividades</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -72,56 +75,25 @@
         <div class="column-1 padding-m">
             <h4 class="padding-m">Explora</h4>
         </div>
-
-        <div class="column-3 padding-mobile">
-            <img src="../img/eva-gour-94mm2Txn12s-unsplash.jpg" alt="" class="target">
-            <div style="float: right;" class="padding-m">
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
-            </div>
-        </div>
-        <div class="column-3 padding-mobile">
-            <img src="../img/dan-cristian-padure-QQkQcaz7qmY-unsplash.jpg" alt="" class="target">
-            <div style="float: right;" class="padding-m">
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
-            </div>
-        </div>
-        <div class="column-3 padding-mobile">
-            <img src="../img/etienne-girardet-j2Soo4TfFMk-unsplash.jpg" alt="" class="target">
-            <div style="float: right;" class="padding-m">
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
-            </div>
-        </div>
-        <div class="column-3 padding-mobile">
-            <img src="../img/lucas-hoang-mwfBszKf5Xw-unsplash.jpg" alt="" class="target">
-            <div style="float: right;" class="padding-m">
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
-            </div>
-        </div>
-        <div class="column-3 padding-mobile">
-            <img src="../img/mathilde-langevin-tbzSgZbEuz4-unsplash.jpg" alt="" class="target">
-            <div style="float: right;" class="padding-m">
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
-            </div>
-        </div>
-        <div class="column-3 padding-mobile">
-            <img src="../img/nick-fewings-EkyuhD7uwSM-unsplash.jpg" alt="" class="target">
-            <div style="float: right;" class="padding-m">
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
-            </div>
-        </div>
-        <div class="column-3 padding-mobile">
-            <img src="../img/susanna-marsiglia-Yjr6EafseQ8-unsplash.jpg" alt="" class="target">
-            <div style="float: right;" class="padding-m">
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
-            </div>
-        </div>
+        <?php
+           $conexion = mysqli_connect('localhost','root','','bd_javiker');
+           $sql = "SELECT * FROM `tbl_actividades`;";
+           $select = mysqli_query($conexion,$sql);
+        
+        foreach ($select as $actividad) {
+            echo'
+            <div class="column-3 padding-mobile">
+                <img src="../img/'.$actividad["img"].'" alt="" class="target">
+                <div style="float: right;" class="padding-m">
+                    <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
+                    <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
+                </div>
+            </div>';
+        
+        }
+        
+        ?>
+        
     </div>
 </body>
 

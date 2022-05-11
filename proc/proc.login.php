@@ -5,25 +5,29 @@ echo $mail;
 $contra = $_POST['contra'];
 echo $contra;
 $conexion = mysqli_connect('localhost','root','','bd_javiker');
-$sql = "SELECT * FROM tbl_registros WHERE correo = '$mail' && contraseña = $contra";
+$sql = "SELECT * FROM tbl_registros WHERE correo = '$mail' && contraseña = '$contra'";
 $correos = mysqli_query($conexion,$sql);
 
 foreach ($correos as $id) {
     if ($id['correo'] == $mail) {
         session_start();
         $_SESSION['id'] = $id['id'];
+        $_SESSION['logged'] = true;
         ?>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            window.location = "../view/actividades.php"
+        </script>
+        <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
             Swal.fire({
             icon: 'success',
             title: 'Usuario correcto',
-            text: 'Usuario o contraseña equivocados!',
+            text: '',
             showConfirmButton: false,
-            footer: '<a href="../view/actividades.html"></a>'
+            footer: '<a href="../view/actividades.php"></a>'
           })
-         </script>
+         </script> -->
          <?php
     }else {
         ?>

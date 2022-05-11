@@ -26,7 +26,10 @@
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../view/actividades.html">Actividades</a>
+                        <a class="nav-link" href="../view/actividades.php">Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../misactividades/misactividades.php">Mis Actividades</a>
                     </li>
                 </ul>
             </div>
@@ -39,7 +42,7 @@
                 <h2>Página para subir Actividad</h2>
             </div>
             <!-- Danny, es un formulario -->
-            <form action="??" method="post">
+            <form action="../proc/proc.subract.php" method="post" enctype="multipart/form-data">
                 <!-- bruh no tengo la bd -->
                 <label for="">Nombre de la Actividad</label>
                 <br>
@@ -62,7 +65,7 @@
                 <br>
                 <label for="">Duración de la Actividad</label>
                 <br>
-                <input type="time" id="appt " name="appt ">
+                <input type="time" id="appt " name="tiempo">
                 <br>
                 <br>
                 <input type="file" name="archivo">
@@ -70,7 +73,7 @@
                 <br>
                 <label for="">Descripción de la Actividad</label>
                 <br>
-                <textarea name="Comentarios " rows="10 " cols="50 ">Añade una pequeña Descripción</textarea>
+                <textarea name="Comentarios" rows="10 " cols="50 "></textarea>
                 <br>
                 <input type="submit">
                 <!-- aki subes a bd -->
