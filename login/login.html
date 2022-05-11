@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,51 +13,51 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">#SuperPágina</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="../index.html">#Index</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vh;">
                     <li class="nav-item">
-                        <a class="nav-link" href="./nosotros.html">Sobre Nosotros</a>
+                        <a class="nav-link" href="../view/nosotros.html">Sobre Nosotros</a>
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./actividades.html">Actividades</a>
+                        <a class="nav-link" href="../view/actividades.html">Actividades</a>
                     </li>
                 </ul>
-            
+
             </div>
         </div>
     </nav>
-<div class="wrapper fadeInDown">
-    <div id="formContent">
-        <div class="fadeIn first">
-            <h1>Iniciar Sesión</h1>
-        </div>
-        
-        <form action="./proc/proc.login.php" method="post">
-            <input type="text" id="mail" class="fadeIn second" name="mail" placeholder="mail">
-            <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
-            <div class="row">
-                <div class="column-2">
-                    <input type="submit" class="fadeIn fourth" value="registro">
-                    <link rel="stylesheet" href="../view/registro.php">
-                </div>
-                <div class="column-2">
-                    <input type="submit" class="fadeIn fourth" value="Login">
-                </div>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <div class="fadeIn first">
+                <h1>Iniciar Sesión</h1>
             </div>
-        </form>
 
-        <!--<div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
-        </div>-->
+            <form action="./proc/proc.login.php" method="post">
+                <input type="text" id="mail" class="fadeIn second" name="mail" placeholder="mail">
+                <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+                <div class="row">
+
+                    <div class="column-2">
+                        <input type="submit" class="fadeIn fourth" value="Login">
+                    </div>
+
+                    <div class="column-2">
+                        <a href="../registro/registro.php">
+                            <input type="button" class="fadeIn fourth" value="Registro">
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 </body>
+
 </html>

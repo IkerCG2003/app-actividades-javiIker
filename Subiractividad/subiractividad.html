@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/registro.css">
+    <title>Página de registro</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">#Index</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vh;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../view/nosotros.html">Sobre Nosotros</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../view/actividades.html">Actividades</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <div class="fadeIn first">
+                <h2>Página de registro</h2>
+            </div>
+            <!-- Danny, es un formulario -->
+            <form action="??" method="post">
+                <!-- bruh no tengo la bd -->
+                <label for="">Nombre de la Actividad</label>
+                <br>
+                <input type="text" id="Nombre actividad" class="fadeIn second" name="Nombre" placeholder="Nombre actividad">
+                <br>
+                <label for="">Tipo de Actividad</label>
+                <br>
+                <br>
+                <label for="">Informática</label>
+                <input type="radio" id="actividad" class="fadeIn second" name="actividad" placeholder="Informatica">
+                <label for="">Matemáticas</label>
+                <input type="radio" id="actividad" class="fadeIn second" name="actividad" placeholder="Matematicas">
+                <label for="">Arte</label>
+                <input type="radio" id="actividad" class="fadeIn second" name="actividad" placeholder="Arte">
+                <label for="">Biología</label>
+                <input type="radio" id="actividad" class="fadeIn second" name="actividad" placeholder="Biología">
+                <br>
+                <br>
+                <label for="">Duración de la Actividad</label>
+                <br>
+                <input type="time" id="appt " name="appt ">
+                <br>
+                <br>
+                <label for="">Descripción de la Actividad</label>
+                <br>
+                <textarea name="Comentarios " rows="10 " cols="50 ">Añade una pequeña Descripción</textarea>
+                <br>
+                <input type="submit">
+                <!-- aki subes a bd -->
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
